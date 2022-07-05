@@ -24,7 +24,7 @@
 
 ### Примеры
 
-Можно потестировать на [Vercel](react-to-an1op04b0-danilluk1.vercel.app)
+Можно потестировать на [link](https://react-to-an1op04b0-danilluk1.vercel.app/)
 
 Главная страница
 ![](./src/assets/alltasks.png)
