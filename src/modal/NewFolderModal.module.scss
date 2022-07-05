@@ -1,0 +1,64 @@
+@import "./../scss/variables";
+
+.modal{
+  padding-top: 18px;
+  width: 235px;
+  height: 148px;
+  position: fixed;
+  left: 25px;
+  right: 0;
+  top: 330px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+}
+
+.modalInput{
+  width: 200px;
+  margin-bottom: 10px;
+  padding-left: 5px;
+  box-sizing: border-box;
+  height: 32px;
+  border-radius: 4px;
+  border: 1px solid #EFEFEF;
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #C7C7C7
+}
+
+.modalAddButton{
+  width: 200px;
+  height: 37px;
+  border-radius: 4px;
+  background: #4DD599;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.colorsContainer{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.colorContainer{
+  margin-right: 5px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.colorContainer::last-child{
+  margin: 0px;
+}

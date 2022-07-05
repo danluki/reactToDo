@@ -1,0 +1,22 @@
+@import "./../../scss/variables";
+
+.todoItem {
+  min-width: 210px;
+  max-height: 16px;
+  height: 16px;
+  width: calc(100% - $aside-width);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 15px auto;
+  display: flex;
+  
+  div{
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+  }
+}

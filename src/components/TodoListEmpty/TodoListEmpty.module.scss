@@ -1,0 +1,14 @@
+@import "./../../scss/variables";
+
+.main_block{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(100% - $aside-width);
+  color: #C9D1D3;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 39px;
+}
