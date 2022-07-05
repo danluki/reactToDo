@@ -40,7 +40,7 @@ const Aside = () => {
         todos: [],
       })
     );
-      
+
     dispatch(selectFolder(id));
     setShow(false);
   };

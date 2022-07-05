@@ -8,6 +8,7 @@
   <li>React</li>
   <li>Redux toolkit</li>
   <li>HTML5/SCSS</li>
+  <li>TypeScript</li>
 </ul>
 
 Проект, покрывает следующие области React

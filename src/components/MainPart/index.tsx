@@ -6,6 +6,7 @@ import {
   setSelectedFolderName,
   setIsNewTodoOpen,
   addTodo,
+  setFolders,
 } from "../../redux/slices/todoSlice";
 
 import TodoItem from "../TodoItem";
@@ -22,6 +23,14 @@ const MainPart: React.FC = () => {
   const folders: ToDoFolder[] = useAppSelector((state) => state.todos.folders);
 
   const isNewTodoOpen = useAppSelector((state) => state.todos.isNewTodoOpen);
+  const isMounted = React.useRef(false);
+  React.useEffect(() => {
+    if (isMounted.current) {
+      const json = JSON.stringify(folders);
+      localStorage.setItem("folders", json);
+    }
+    isMounted.current = true;
+  }, [folders]);
 
   const inputChanged = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.value.length > 25) {

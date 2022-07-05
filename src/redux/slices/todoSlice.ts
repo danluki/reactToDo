@@ -1,4 +1,5 @@
 import { createSlice, PayloadAction} from "@reduxjs/toolkit";
+import { getFoldersFromLS } from "../../utils/getFoldersFromLS";
 
 export enum ToDoColors {
   ColorOne = "#C9D1C8",
@@ -30,27 +31,10 @@ interface TodoSliceState {
   isNewTodoOpen: boolean;
 }
 
+const folders = getFoldersFromLS();
+
 const initialState : TodoSliceState = {
-  folders: [
-    {
-      color: ToDoColors.ColorOne,
-      name: "Папка 1",
-      todos: [{isDone: false, task: "Тестовое задание 1", id: Math.random(),}, {isDone: true, task: "Тестовое задание 2", id: Math.random(),}],
-      id: Math.random(),
-    },
-    {
-      color: ToDoColors.ColorTwo,
-      name: "Папка 2",
-      todos: [{isDone: false, task: "Тестовое задание 1", id: Math.random(),}, {isDone: true, task: "Тестовое задание 2", id: Math.random(),}],
-      id: Math.random(),
-    },
-    {
-      color: ToDoColors.ColorThree,
-      name: "Папка 3",
-      todos: [],
-      id: Math.random(),
-    },
-  ],
+  folders: folders,
   selectedFolder: null,
   isNewTodoOpen: false,
 };
@@ -146,9 +130,12 @@ export const todoSlice = createSlice({
     setIsNewTodoOpen: (state, action: PayloadAction<boolean>) => {
       state.isNewTodoOpen = action.payload;
     },
+    setFolders: (state, action: PayloadAction<ToDoFolder[]>) => {
+      state.folders = action.payload;
+    }
   },
 });
 
-export const {addFolder, deleteFolder, addTodo, deleteTodo, selectFolder, changeTodoIsDone, setSelectedFolderName, setIsNewTodoOpen} = todoSlice.actions;
+export const {addFolder, deleteFolder, addTodo, deleteTodo, selectFolder, changeTodoIsDone, setSelectedFolderName, setIsNewTodoOpen, setFolders} = todoSlice.actions;
 
 export default todoSlice.reducer;
